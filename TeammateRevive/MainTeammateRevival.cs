@@ -22,12 +22,12 @@ using UnityEngine.Networking;
 
 namespace TeammateRevive
 {
-    [BepInDependency("com.bepis.r2api")]
-    [BepInDependency("dev.ontrigger.itemstats", BepInDependency.DependencyFlags.SoftDependency)]
-    [BepInDependency("com.xoxfaby.BetterUI", BepInDependency.DependencyFlags.SoftDependency)]
-    [BepInDependency("com.KingEnderBrine.InLobbyConfig", BepInDependency.DependencyFlags.SoftDependency)]
-    [BepInPlugin(PluginGUID, PluginName, PluginVersion)]
-    [R2APISubmoduleDependency(nameof(PrefabAPI), nameof(NetworkingAPI), nameof(ItemAPI), nameof(LanguageAPI))]
+    // [BepInDependency("com.bepis.r2api")]
+    // [BepInDependency("dev.ontrigger.itemstats", BepInDependency.DependencyFlags.SoftDependency)]
+    // [BepInDependency("com.xoxfaby.BetterUI", BepInDependency.DependencyFlags.SoftDependency)]
+    // [BepInDependency("com.KingEnderBrine.InLobbyConfig", BepInDependency.DependencyFlags.SoftDependency)]
+    // [BepInPlugin(PluginGUID, PluginName, PluginVersion)]
+    // [R2APISubmoduleDependency(nameof(PrefabAPI), nameof(NetworkingAPI), nameof(ItemAPI), nameof(LanguageAPI))]
     public class MainTeammateRevival : BaseUnityPlugin
     {
         #region Plugin variables
@@ -64,6 +64,7 @@ namespace TeammateRevive
 
         public void Awake()
         {
+            return;
             instance = this;
             this.pluginConfig = PluginConfig.Load(this.Config);
             
@@ -160,6 +161,7 @@ namespace TeammateRevive
 
         public void Update()
         {
+            return;
 #if DEBUG
             DebugHelper.Update();
 #endif
